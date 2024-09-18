@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e; /* Slightly lighter dark background */
+}
+
+.logo {
+    width: 100px; /* Adjust based on your logo size */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.tagline {
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="color"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6200ea; /* Purple button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+}
+
+#qr-code {
+    margin-top: 20px;
+}
+
+#qr-code img {
+    border-radius: 10px; /* Rounded corners for QR code */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.preview-container {
+   margin-top: 30px; 
+}
+
+.preview-container h2 {
+   color:#bbb; 
+}
+
+.action-buttons {
+   margin-top: 20px; 
+}
+
+.action-buttons button,
+.action-buttons a {
+   margin-right: 10px; 
+   padding: 10px; 
+   background-color: #03a9f4; /* Light blue for action buttons */
+   color: white; 
+   border-radius: 5px; 
+   text-decoration: none; 
+   cursor:pointer; 
+}
+
+.action-buttons button:hover,
+.action-buttons a:hover {
+   background-color: #0288d1; /* Darker blue on hover */
+}
+
+.switch {
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+}
+
+.switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+
+.slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #ccc; /* Light grey */
+   transition: .4s;
+   border-radius: 34px; /* Rounded corners */
+}
+
+.slider::before {
+   position: absolute;
+   content: "";
+   height: 26px; /* Circle height */
+   width: 26px; /* Circle width */
+   left: 4px; /* Circle left position */
+   bottom: 4px; /* Circle bottom position */
+   background-color: white; /* Circle color */
+   border-radius: 50%; /* Circle shape */
+   transition: .4s; /* Transition effect */
+}
+
+input:checked + .slider {
+   background-color: #6200ea; /* Purple when checked */
+}
+
+input:checked + .slider::before {
+   transform: translateX(26px); /* Move circle to the right when checked */
+}
+
+footer {
+   margin-top: 20px; 
+   font-size: small; 
+   color:#bbb; 
+}

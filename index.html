@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body" class="dark-mode">
+    <div class="container">
+        <header>
+            <img src="qr.png" alt="Unique Logo" class="logo">
+            <h1>QR Code Generator</h1>
+            <p class="tagline">Create your own QR codes easily!</p>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle" checked>
+                <span class="slider round"></span>
+            </label>
+        </header>
+        <main>
+            <input type="text" id="qr-input" placeholder="Enter URL or text">
+            <input type="color" id="qr-color" value="#000000"> <!-- Color Picker -->
+            <button id="generate-btn">Generate QR Code</button>
+            <div id="qr-code"></div>
+            <div class="preview-container">
+                <h2>Preview:</h2>
+                <div id="qr-preview"></div> <!-- Live Preview -->
+            </div>
+            <!-- Share and Download Buttons -->
+            <div class="action-buttons">
+                <button id="share-btn">Share QR Code</button>
+                <a id="download-btn" href="#" download style="display:none;">Download QR Code</a> <!-- Download Link -->
+            </div>
+        </main>
+        <footer>
+            <p class="footer-text">Designed by Shubhang Mishra</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const toggle = document.getElementById('dark-mode-toggle');
+        const body = document.getElementById('body');
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>
